@@ -1,0 +1,47 @@
+body {
+    font-family: 'Vastago Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FBF3C4;
+    color: #0F4D7E;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0F4D7E;
+}
+
+.logo {
+    font-size: 24px;
+    color: #FBF3C4;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #E4B773;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #0F4D7E, #87E2FD);
+    color: white;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #E4B773;
+    color: #0F4D7E;
+    text-decoration: none;
+    border-radius: 5px;
+}
