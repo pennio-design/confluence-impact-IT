@@ -1,70 +1,23 @@
-// Mobile Navigation Toggle
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", function() {
-        navLinks.classList.toggle("active");
-    });
-
-    // Smooth Scrolling for Navigation Links
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            document.getElementById(targetId).scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-    });
-
-    // Scroll Animation for Sections
-    const sections = document.querySelectorAll("section");
-
-    const fadeInOnScroll = () => {
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            if (sectionTop < window.innerHeight - 100) {
-                section.classList.add("visible");
-            }
-        });
-    };
-
-    window.addEventListener("scroll", fadeInOnScroll);
-    fadeInOnScroll(); // Trigger on load
-});
 document.addEventListener("DOMContentLoaded", function () {
-    const bookingForm = document.getElementById("booking-form");
-    const formMessage = document.getElementById("form-message");
+    // Fix for event listener error
+    const menuToggle = document.getElementById("mobile-menu");
+    const navContainer = document.querySelector(".nav-container");
 
-    bookingForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        // Get form values
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const date = document.getElementById("date").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        // Basic validation
-        if (name === "" || email === "" || date === "" || message === "") {
-            alert("Please fill in all fields.");
-            return;
-        }
-
-        // Simulate successful form submission
-        formMessage.classList.remove("hidden");
-        bookingForm.reset();
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
-            });
+    if (menuToggle && navContainer) {
+        menuToggle.addEventListener("click", function () {
+            navContainer.classList.toggle("active");
         });
-    });
-});
+    }
 
+    // Booking Form Submission
+    const form = document.getElementById("booking-form");
+    const message = document.getElementById("form-message");
+
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            message.classList.remove("hidden");
+            form.reset();
+        });
+    }
+});

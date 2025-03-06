@@ -3,15 +3,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Overused Grotesk', sans-serif;
 }
 
 body {
     color: #1C1C1C;
     background-color: #F4F4F4;
-    line-height: 1.6;
+    line-height: 1.6; 
+    align-items: center;
 }
 
+p {
+    text-align: center;
+} 
 /* Header & Navigation */
 header {
     background-color: #004080;
@@ -93,12 +97,17 @@ nav {
 }
 
 /* Hero Section */
+
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
-    color: white;
+    width: 100vw; /* Ensures full width */
+    height: 100vh; /* Ensures full height */
+    background: url('hero.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image fills the section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 120px 20px;
-    position: relative;
+    color: white;
 }
 
 .hero h1 {
@@ -203,11 +212,7 @@ footer {
 }
 
 /* Scroll Animation */
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-}
+
 
 section.visible {
     opacity: 1;

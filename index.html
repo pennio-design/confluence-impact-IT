@@ -10,24 +10,33 @@
     <header>
         <nav>
             <img src="logo.png" alt="Company Logo" class="header-logo">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#booking" class="btn book-session-btn">Book a Session</a>
-        </nav>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
 
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#booking" class="btn book-session-btn">Book a Session</a>
+            </div>
+        </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
-            <h1>Welcome to Confluence Impact IT</h1>
-            <p>Your trusted IT solutions partner.</p>
-            <a href="#booking" class="btn">Book a Session</a>
+            <div class="hero-content">
+                <h1>Welcome to Confluence Impact IT</h1>
+                <p>Empowering Technology for a Brighter Future</p>
+                <a href="#booking" class="btn book-session-btn">Book a Session</a>
+            </div>
         </section>
-
 
         <section id="services">
             <h2>Our Services</h2>
@@ -43,32 +52,35 @@
             <h2>Contact Us</h2>
             <p>Get in touch with us for business inquiries.</p>
         </section>
+
         <section id="booking">
-        <h2>Book a Session</h2>
-        <p>Schedule a consultation with our IT experts.</p>
-    
-        <form id="booking-form">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="Your Name" required>
+            <h2>Book a Session</h2>
+            <p>Schedule a consultation with our IT experts.</p>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="your@email.com" required>
+            <form id="booking-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
 
-            <label for="date">Preferred Date</label>
-            <input type="date" id="date" required>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
 
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Additional details..." required></textarea>
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" required>
 
-            <button type="submit" class="btn">Submit Booking</button>
-        </form>
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Additional details..." required></textarea>
 
-        <p id="form-message" class="hidden">Your session has been booked successfully!</p>
-    </section>
+                <button type="submit" class="btn">Submit Booking</button>
+            </form>
+
+            <p id="form-message" class="hidden">Your session has been booked successfully!</p>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Confluence Impact IT. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
