@@ -3,12 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    color: #333;
-    background-color: #f4f4f4;
+    color: #1C1C1C;
+    background-color: #F4F4F4;
+    line-height: 1.6;
 }
 
 /* Header & Navigation */
@@ -16,19 +17,20 @@ header {
     background-color: #004080;
     padding: 15px 0;
     color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 20px;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
 }
 
@@ -45,92 +47,14 @@ nav {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    padding: 5px 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-    background: white;
-    color: #004080;
-    border-radius: 5px;
-}
-
-/* Hero Section */
-.hero {
-    background: url('hero.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-/* Sections */
-section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #004080;
-    color: white;
-}
-/* Book a Session Form */
-#booking {
-    text-align: center;
-    padding: 60px 20px;
-    max-width: 600px;
-    margin: auto;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#booking-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-}
-
-input, textarea {
-    padding: 12px;
-    width: 100%;
-    border: 1px solid #0047AB;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button {
-    padding: 12px;
-    background: #0074FF;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-button:hover {
     background: #DEC278;
     color: #1C1C1C;
-}
-
-/* Success Message */
-.hidden {
-    display: none;
-    color: green;
-    margin-top: 10px;
 }
 
 /* Mobile Navigation */
@@ -168,23 +92,37 @@ button:hover {
     }
 }
 
-/* Scroll Animation */
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
+/* Hero Section */
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
 }
 
-/* Book a Session Button */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+/* Call to Action Button */
 .book-session-btn {
     background: #DEC278;
     color: #1C1C1C;
-    padding: 10px 15px;
-    font-size: 16px;
+    padding: 12px 18px;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .book-session-btn:hover {
@@ -192,6 +130,84 @@ section {
     color: white;
 }
 
+/* Sections */
+section {
+    padding: 70px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #004080;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Booking Form */
+#booking {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: auto;
+    background: #F9F9F9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+input, textarea {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #0047AB;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background: #0074FF;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #DEC278;
+    color: #1C1C1C;
+}
+
+/* Success Message */
+.hidden {
+    display: none;
+    color: green;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #004080;
+    color: white;
+    font-size: 14px;
+}
+
+/* Scroll Animation */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
 
 section.visible {
     opacity: 1;
