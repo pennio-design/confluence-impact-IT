@@ -39,6 +39,28 @@
             <h2>Contact Us</h2>
             <p>Get in touch with us for business inquiries.</p>
         </section>
+        <section id="booking">
+        <h2>Book a Session</h2>
+        <p>Schedule a consultation with our IT experts.</p>
+    
+        <form id="booking-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Additional details..." required></textarea>
+
+            <button type="submit" class="btn">Submit Booking</button>
+        </form>
+
+        <p id="form-message" class="hidden">Your session has been booked successfully!</p>
+    </section>
     </main>
 
     <footer>
