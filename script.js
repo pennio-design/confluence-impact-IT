@@ -33,3 +33,28 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", fadeInOnScroll);
     fadeInOnScroll(); // Trigger on load
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const bookingForm = document.getElementById("booking-form");
+    const formMessage = document.getElementById("form-message");
+
+    bookingForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Get form values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const date = document.getElementById("date").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Basic validation
+        if (name === "" || email === "" || date === "" || message === "") {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Simulate successful form submission
+        formMessage.classList.remove("hidden");
+        bookingForm.reset();
+    });
+});
+
