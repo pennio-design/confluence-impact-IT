@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".hamburger");
     const navLinks = document.querySelector("nav ul");
     const navItems = document.querySelectorAll("nav ul li a");
+    const header = document.querySelector("header");
 
-    // Toggle Menu on Click
+    // Toggle mobile menu
     menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("show");
         menuToggle.classList.toggle("active");
     });
 
-    // Close Menu When a Link is Clicked
+    // Close menu when a link is clicked
     navItems.forEach(item => {
         item.addEventListener("click", () => {
             navLinks.classList.remove("show");
@@ -17,9 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Auto Hide Navbar on Scroll
+    // Auto-hide navbar on scroll
     let lastScrollY = window.scrollY;
-    const header = document.querySelector("header");
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > lastScrollY) {
