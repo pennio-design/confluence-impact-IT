@@ -232,3 +232,25 @@ footer {
         transform: rotate(-45deg) translate(5px, -5px);
     }
     }
+
+@font-face {
+    font-family: 'Overused Grotesk';
+    src: url('assets/fonts/OverusedGrotesk-Regular.woff2') format('woff2'),
+         url('assets/fonts/OverusedGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Overused Grotesk';
+    src: url('assets/fonts/OverusedGrotesk-Bold.woff2') format('woff2'),
+         url('assets/fonts/OverusedGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Overused Grotesk', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Vastago Grotesk', sans-serif;
+        }
