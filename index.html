@@ -1,85 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Confluence Impact IT</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Ensure Overused Grotesk is loaded if available -->
-  <link href="https://fonts.googleapis.com/css2?family=Overused+Grotesk&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confluence Impact IT</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Floating Header -->
-  <header>
-    <nav>
-      <img src="logo.png" alt="Company Logo" class="header-logo" />
-      <button class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <div class="nav-container">
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#booking" class="btn book-session-btn">Book a Session</a>
-      </div>
-    </nav>
-  </header>
+    <header>
+        <img src="logo.png" alt="Confluence Impact IT Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#contact" class="btn primary">Get Started</a>
+    </header>
 
-  <!-- Add a top padding on main to avoid header overlay -->
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Welcome to Confluence Impact IT</h1>
-        <p>Empowering Technology for a Brighter Future</p>
-        <a href="#booking" class="btn book-session-btn">Book a Session</a>
-      </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empowering Businesses with Cutting-Edge IT Solutions</h1>
+            <p>Your digital transformation partner.</p>
+            <div class="cta-buttons">
+                <a href="#services" class="btn primary">Explore Services</a>
+                <a href="#contact" class="btn secondary">Get a Free Consultation</a>
+            </div>
+        </div>
     </section>
 
-    <section id="services">
-      <h2>Our Services</h2>
-      <p>We offer a range of IT solutions to drive your business forward.</p>
-    </section>
-
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <p>Take a look at our past projects and successful implementations.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Get in touch with us for business inquiries.</p>
-    </section>
-
-    <section id="booking">
-      <h2>Book a Session</h2>
-      <p>Schedule a consultation with our IT experts.</p>
-      <form id="booking-form">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Your Name" required />
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="your@email.com" required />
-
-        <label for="date">Preferred Date</label>
-        <input type="date" id="date" required />
-          
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Your message here..." required></textarea>
-
-        <button type="submit" class="btn submit-btn">Submit</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Confluence Impact IT. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
