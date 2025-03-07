@@ -254,3 +254,52 @@ body {
 h1, h2, h3 {
     font-family: 'Vastago Grotesk', sans-serif;
         }
+/* Ensure the mobile menu is hidden by default */
+nav ul {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(0, 71, 171, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* Show menu when .show class is added */
+nav ul.show {
+    display: flex;
+    max-height: 500px; /* Adjust for smooth expansion */
+}
+
+/* Hamburger menu appearance */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+/* Hamburger active state */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+        }
