@@ -30,16 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
         lastScrollY = window.scrollY;
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
+    const navMenu = document.querySelector(".nav-menu");
 
+    // Toggle menu
     hamburger.addEventListener("click", function () {
         navMenu.classList.toggle("show");
         hamburger.classList.toggle("active");
     });
 
-    // Close menu when clicking outside or on a link
+    // Close menu when clicking outside or on a menu link
     document.addEventListener("click", function (event) {
         if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
             navMenu.classList.remove("show");
@@ -47,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Close menu when a nav link is clicked
-    document.querySelectorAll("nav ul li a").forEach(link => {
+    // Close menu when a link is clicked
+    document.querySelectorAll(".nav-menu ul li a").forEach(link => {
         link.addEventListener("click", function () {
             navMenu.classList.remove("show");
             hamburger.classList.remove("active");
