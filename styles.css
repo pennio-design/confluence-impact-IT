@@ -29,6 +29,7 @@ header {
 
 .logo {
     width: 120px;
+    height: auto;
 }
 
 nav ul {
