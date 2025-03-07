@@ -12,15 +12,25 @@
     <!-- Header with Floating Navigation -->
     <header>
         <img src="logo.png" alt="Confluence Impact IT Logo" class="logo">
-        <nav>
+        
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav id="nav-menu">
             <ul>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="mobile-only"><a href="#contact" class="btn primary">Get Started</a></li>
             </ul>
         </nav>
-        <a href="#contact" class="btn primary">Get Started</a>
+
+        <!-- Desktop Get Started Button -->
+        <a href="#contact" class="btn primary desktop-only">Get Started</a>
     </header>
 
     <!-- Hero Section -->
@@ -89,4 +99,4 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+                    </html>
