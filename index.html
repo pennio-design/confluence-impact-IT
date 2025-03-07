@@ -10,25 +10,25 @@
 <body>
 
     <!-- Header with Floating Navigation -->
-    <header>
-        <img src="logo.png" alt="Confluence Impact IT Logo" class="logo">
-        
-        <!-- Hamburger Menu -->
-        <div class="hamburger" onclick="toggleMenu()">
-            ☰
-        </div>
+    <header class="navbar">
+    <a href="index.html">
+        <img src="logo.png" alt="Logo" class="logo">
+    </a>
+    <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
 
-        <!-- Navigation Menu -->
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="mobile-only"><a href="#contact" class="btn primary">Get Started</a></li>
-            </ul>
-        </nav>
-
+<nav class="nav-menu">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
         <!-- Desktop Get Started Button -->
         <a href="#contact" class="btn primary desktop-only">Get Started</a>
     </header>
