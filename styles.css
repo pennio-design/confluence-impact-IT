@@ -45,18 +45,22 @@ nav ul li {
     display: inline;
 }
 
+
+
 nav ul li a {
-    color: white;
+    color: #ffffff; /* Ensure text is white */
     text-decoration: none;
     font-size: 16px;
     padding: 10px 15px;
     transition: 0.3s;
+    font-weight: bold; /* Improve visibility */
 }
 
 nav ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
+
 
 /* Hero Section */
 .hero {
